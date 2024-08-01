@@ -4,7 +4,7 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title="Welcome to Astro.">
 	<main>
-		<header class="py-2 px-8 flex items-center fixed top-0 w-full justify-between">
+		<header class="py-2 px-8 flex items-center fixed top-0 w-full justify-between z-40">
 			<div class="flex flex-grow basis-0">
 				<svg
 				class="h-full w-auto transition-colors duration-500"
@@ -26,7 +26,19 @@ import Layout from '../layouts/Layout.astro';
 				</ul>
 			</nav>
 		</header>
-		Bitcoin, una historia
+		<section
+		class=" h-screen w-screen text-center relative overflow-hidden"
+		>	
+		<header class="z-30 relative">
+			<h2 class="text-white pt-40 text-5xl font-medium">dive in</h2>
+			<p class="text-white text-base">still not getting it?</p>
+		</header>
+				
+				<div class="absolute top-0 bottom-0 h-full z-10">
+					<video class="object-center" autoplay muted loop src="/video.webm"></video>
+				</div>
+		</section>
 	</main>
 </Layout>
+
 
