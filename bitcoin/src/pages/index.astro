@@ -17,23 +17,29 @@ import Layout from '../layouts/Layout.astro';
 			</div>
 
 			<nav> 
-				<ul class="flex text-sm [&>li>a]:text-orange-600 [&>li>a]:duration-500 [&>li>a]:text-current [&>li>a]:font-medium [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py-2">
-					<li><a href="">Historia</a></li>
-					<li><a href="">Back to basics</a></li>
-					<li><a href="">Cómo compro?</a></li>
-					<li><a href="">Peligros</a></li>
-					<li><a href="">Blog</a></li>
+				<ul class="flex text-3xl [&>li>a]:text-orange-600 [&>li>a]:duration-500 [&>li>a]:text-current [&>li>a]:font-medium [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py-2">
+					<li><a href="">what's this?</a></li>
+					<li><a href="">speak with us</a></li>
+					<li><a href="">blog</a></li>
 				</ul>
 			</nav>
 		</header>
+
 		<section
-		class=" h-screen w-screen text-center relative overflow-hidden"
+		class="bg-black h-screen w-screen text-center overflow-hidden relative"
 		>	
-		<header class="z-30 relative">
-			<h2 class="text-white pt-40 text-5xl font-medium">dive in</h2>
-			<p class="text-white text-base">still not getting it?</p>
-		</header>
-				
+		<div class="z-30 relative h-full flex flex-col">
+			<header class="">
+				<h2 class="text-white pt-40 text-5xl font-medium">dive in</h2>
+				<p class="text-white text-base">still not getting it?</p>
+			</header>
+					
+			<footer class="text-white flex flex-col flex-grow justify-end pb-24">
+				<a href="#">book a one on one</a>
+			</footer>
+
+		</div>
+		
 				<div class="absolute top-0 bottom-0 h-full z-10">
 					<video class="object-center" autoplay muted loop src="/video.webm"></video>
 				</div>
