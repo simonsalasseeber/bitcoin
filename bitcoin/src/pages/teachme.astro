@@ -1,0 +1,19 @@
+---
+import Layout from '../layouts/Layout.astro';
+import TeachMe from '../components/TeachMe.astro';
+import LandingHeader from '../components/LandingHeader.astro';
+import Wallets from '../components/Wallets.astro';
+
+---
+
+<Layout title="Teach Me">
+    <LandingHeader />
+    <main  class="snap-y snap-mandatory relative w-full h-screen overflow-auto">
+        <div class="snap-center">
+			<TeachMe />
+		</div>
+        <div class="snap-center">
+			<Wallets />
+		</div>
+    </main>
+</Layout>

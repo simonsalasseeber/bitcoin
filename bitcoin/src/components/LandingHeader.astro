@@ -3,13 +3,13 @@ import Logo from "./Logo.astro";
 ---
 
 <header class="py-2 px-8 flex items-center fixed top-0 w-full justify-between z-40">
-    <Logo />
+    <Logo onClick=scrollToTop() />
 
     <nav> 
         <ul class="flex text-3xl [&>li>a]:text-orange-600 [&>li>a]:duration-500 [&>li>a]:text-current [&>li>a]:font-medium [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py-2">
-            <li><a href="teachme">teach me</a></li>
-            <li><a href="">speak with us</a></li>
-            <li><a href="">blog</a></li>
+            <li><a href="/teachme">teach me</a></li>
+            <li><a href="/speak">speak with us</a></li>
+            <li><a href="/blog">blog</a></li>
         </ul>
     </nav>
 </header>
