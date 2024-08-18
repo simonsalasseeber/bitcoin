@@ -1,0 +1,78 @@
+---
+// bitcoinbuyingmethods.astro
+const buyingMethods = [
+  {
+    icon: 'users',
+    title: 'bitcoin meetups',
+    description: 'attend local meetups and buy directly from other bitcoin enthusiasts.',
+    privacyLevel: 5
+  },
+  {
+    icon: 'map-pin',
+    title: 'local sellers',
+    description: 'search for seller pages in your area for more private transactions.',
+    privacyLevel: 5
+  },
+  {
+    icon: 'briefcase',
+    title: 'services for bitcoin',
+    description: 'offer your services and accept payments in bitcoin as a form of acquisition.',
+    privacyLevel: 4
+  },
+  {
+    icon: 'credit-card',
+    title: 'bitcoin atms',
+    description: 'use coinatm radar to find bitcoin atms near you.',
+    privacyLevel: 3
+  },
+  {
+    icon: 'building',
+    title: 'exchanges',
+    description: 'use exchange platforms, but keep in mind they require your personal data.',
+    privacyLevel: 1
+  }
+];
+---
+
+<section class="min-h-screen bg-orange-50 py-12 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-7xl mx-auto">
+    <h1 class="text-4xl font-bold text-center mt-5 text-gray-900 mb-2">
+      five ways to acquire bitcoin
+    </h1>
+    <p class="text-xl text-center text-gray-700 mb-12">
+      in decreasing order of privacy
+    </p>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {buyingMethods.map((method) => (
+        <div class="bg-orange-100 p-6 rounded-lg shadow-md">
+          <div class="flex items-center mb-4">
+            <span class={`text-orange-500 icon-${method.icon}`}></span>
+            <h3 class="text-xl font-semibold ml-2">{method.title}</h3>
+          </div>
+          <p class="text-gray-700 mb-4">{method.description}</p>
+          <div class="flex items-center">
+              <span class="text-sm font-medium mr-2">privacy level:</span>
+                <div class="w-full bg-transparent border border-orange-500 rounded-full h-2 mr-2">
+                  <div 
+                    class="bg-orange-500 h-full rounded-full" 
+                    style={`width: ${method.privacyLevel * 20}%`}
+                  ></div>
+                </div>
+              <span class="text-sm font-medium"></span>
+            </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  /* you would need to add your icon font or svg icons here */
+  .icon-users::before { content: '\1F465'; } /* unicode for users icon */
+  .icon-map-pin::before { content: '\1F4CD'; } /* unicode for map pin icon */
+  .icon-briefcase::before { content: '\1F4BC'; } /* unicode for briefcase icon */
+  .icon-credit-card::before { content: '\1F4B3'; } /* unicode for credit card icon */
+  .icon-building::before { content: '\1F3E2'; } /* unicode for building icon */
+  .icon-star::before { content: '\2B50'; } /* unicode for star icon */
+</style>

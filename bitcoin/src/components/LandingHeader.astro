@@ -3,13 +3,11 @@ import Logo from "./Logo.astro";
 ---
 
 <header class="py-2 px-8 flex items-center fixed top-0 w-full justify-between z-40">
-    <Logo onClick=scrollToTop() />
-
+    <Logo/>
     <nav> 
-        <ul class="flex text-3xl [&>li>a]:text-orange-600 [&>li>a]:duration-500 [&>li>a]:text-current [&>li>a]:font-medium [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py-2">
-            <li><a href="/teachme">teach me</a></li>
-            <li><a href="/speak">speak with us</a></li>
-            <li><a href="/blog">blog</a></li>
+        <ul class="flex text-3xl [&>li>a]:text-orange-600 [&>li>a]:duration-500 [&>li>a]:font-medium [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py-2">
+            <li><a href="/speak" class="relative hover:text-orange-500 transition-colors duration-300 ease-in-out after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-orange-500 after:transition-transform after:duration-300 after:ease-in-out after:transform after:scale-x-0 after:origin-bottom-right hover:after:scale-x-100 hover:after:origin-bottom-left">speak with us</a></li>
+            <li><a href="/blog" class="relative hover:text-orange-500 transition-colors duration-300 ease-in-out after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-orange-500 after:transition-transform after:duration-300 after:ease-in-out after:transform after:scale-x-0 after:origin-bottom-right hover:after:scale-x-100 hover:after:origin-bottom-left">blog</a></li>
         </ul>
     </nav>
 </header>
