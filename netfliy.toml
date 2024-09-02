@@ -1,2 +1,3 @@
 [build]
-  publish = "bitcoin/"
+  command = "cd bitcoin && npm run build"
+  publish = "bitcoin/dist"
