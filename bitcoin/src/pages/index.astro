@@ -7,22 +7,18 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Welcome to Astro.">
-	
-	<main class="snap-y snap-mandatory relative w-full h-screen overflow-auto">		
-		
-		<div class="snap-center">
+	<main class="relative w-full h-screen overflow-auto md:snap-y md:snap-mandatory">		
+		<div class="min-h-screen md:snap-center">
 			<LandingHeader />
 			<TeachMe />
 		</div>
-        <div class="snap-center">
+        <div class="min-h-screen md:snap-center">
 			<Wallets />
 		</div>
-        <div class="snap-center">
+        <div class="min-h-screen md:snap-center">
             <BuyingMethods/>
         </div>
     </main>
-		
-	</main>
 </Layout>
 
 
